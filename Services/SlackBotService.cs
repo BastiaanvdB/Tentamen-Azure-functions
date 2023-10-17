@@ -32,8 +32,8 @@ namespace TentamenSlackBot.Services
             {
                 var message = new
                 {
-                    text = $"New commit by {pushEvent.Pusher.Name} ({pushEvent.Pusher.Email}): at {branchName} - {commit.Message}"
-                };
+                    text = $"New commit by {pushEvent.Pusher.Name} ({pushEvent.Pusher.Email}) on branch {branchName} at {commit.Timestamp:yyyy-MM-dd HH:mm:ss} - {commit.Message}"
+            };
 
                 try
                 {
